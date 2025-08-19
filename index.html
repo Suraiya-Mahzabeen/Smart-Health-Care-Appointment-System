@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Healthcare Appointment System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="../CSS/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm rounded-bottom-xl">
+        <div class="container px-4">
+            <a class="navbar-brand text-primary fw-bold fs-4" href="#" id="homeLink">Smart Health</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav" id="mainNavLinks">
+                    <li class="nav-item">
+                        <a class="nav-link text-dark me-3" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark me-3" href="#features">Features</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-dark me-3" href="#about">About Us</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link text-dark me-3" href="#MakeAppointment">
+                            Make Appointment</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark me-3" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-primary rounded-pill px-3" data-bs-toggle="modal"
+                            data-bs-target="#loginModal">
+                            Login
+                        </button>
+                    </li>
+                    <li class="nav-item ms-2">
+                        <button class="btn btn-success rounded-pill px-3" data-bs-toggle="modal"
+                            data-bs-target="#registerModal">
+                            Register
+                        </button>
+                    </li>
+                </ul>
+                <ul class="navbar-nav d-none" id="loggedInNavLinks">
+
+
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <button class="btn btn-outline-primary rounded-pill px-3" id="logoutBtn">Logout</button>
+                        </li>
+                    </ul>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="landingPageContent">
+        <section class="hero-section text-center" id="home">
+            <div class="shape-circle-1"></div>
+            <div class="shape-circle-2"></div>
+            <div class="container position-relative z-1">
+                <div class="row justify-content-center">
+                    <div class="col-lg-9">
+                        <h1 class="display-3 fw-bold">Your Health, Our Priority. <br>Seamless Appointments.</h1>
+                        <p class="lead mb-4">
+                            Connect with top healthcare professionals effortlessly. Book, manage, and track your
+                            appointments with our intuitive online system.
+                        </p>
+                        <a href="appointment.html" class="btn btn-light hero-button me-3 book-appointment-btn">Book an
+                            Appointment</a>
+                        <a href="#features" class="btn btn-outline-light hero-button">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about" id="about">
+            <div class="container py-5">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <h2 class="mb-4">About Our Smart Healthcare Appointment System</h2>
+                        <p>
+                            Our mission is to revolutionize the way patients and healthcare providers connect. We've
+                            developed a smart, intuitive platform to simplify the process of booking, managing, and
+                            attending medical appointments. By removing administrative friction, we empower patients to
+                            take control of their health journey and enable clinics to operate with greater efficiency.
+                        </p>
+                        <p>
+                            The system is built on a foundation of security and reliability. Patients can easily search
+                            for doctors by specialty, book a convenient time slot, and receive automated reminders. For
+                            medical professionals, our platform provides a clear overview of their daily schedule, a
+                            comprehensive patient history, and tools to manage their practice effortlessly. We are
+                            committed to a healthier, more connected future for everyone.
+                        </p>
+                    </div>
+                    <div class="col-lg-6">
+                        <img src="../images/About.png" class="img-fluid rounded shadow"
+                            alt="A team of doctors and technologists working together">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-5 bg-light" id="features">
+            <div class="container">
+                <h2 class="text-center text-primary mb-5 fw-bold">Why Choose Smart Health?</h2>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="feature-card">
+                            <i class="fas fa-calendar-alt icon"></i>
+                            <h3>Easy Online Booking</h3>
+                            <p>Schedule your appointments 24/7 from anywhere, at any time, with just a few clicks.</p>
+                            <button class="btn btn-outline-primary mt-3 book-appointment-btn">Book Now</button>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="feature-card">
+                            <i class="fas fa-user-md icon"></i>
+                            <h3>Find Your Specialist</h3>
+                            <p>Browse through a wide network of verified doctors across various specialties.</p>
+                            <button class="btn btn-outline-primary mt-3 find-doctor-btn">Find a Doctor</button>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="feature-card">
+                            <i class="fas fa-notes-medical icon"></i>
+                            <h3>Manage Your Records</h3>
+                            <p>Access your appointment history and health records securely in one place.</p>
+                            <button class="btn btn-outline-primary mt-3 manage-records-btn">My Records</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-5" id="how-it-works">
+            <div class="container">
+                <h2 class="text-center text-primary mb-5 fw-bold">How It Works</h2>
+                <div class="d-flex flex-wrap justify-content-center align-items-center how-it-works-container">
+                    <div class="how-it-works-step mx-3 my-3">
+                        <div class="step-number">1</div>
+                        <h3>Register/Login</h3>
+                        <p>Create an account or log in to access our services.</p>
+                    </div>
+                    <i class="fas fa-arrow-right arrow-icon"></i>
+                    <div class="how-it-works-step mx-3 my-3">
+                        <div class="step-number">2</div>
+                        <h3>Search & Select</h3>
+                        <p>Find doctors by specialty, location, or availability.</p>
+                    </div>
+                    <i class="fas fa-arrow-right arrow-icon"></i>
+                    <div class="how-it-works-step mx-3 my-3">
+                        <div class="step-number">3</div>
+                        <h3>Book Appointment</h3>
+                        <p>Choose a convenient date and time and confirm your booking.</p>
+                    </div>
+                    <i class="fas fa-arrow-right arrow-icon"></i>
+                    <div class="how-it-works-step mx-3 my-3">
+                        <div class="step-number">4</div>
+                        <h3>Get Treated</h3>
+                        <p>Receive timely reminders and attend your consultation.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-5 bg-light" id="options">
+            <div class="container">
+                <h2 class="text-center text-primary mb-5 fw-bold">Explore Our Options</h2>
+                <div class="row g-4 text-center">
+                    <div class="col-md-4">
+                        <div class="option-card p-4 rounded shadow-sm">
+                            <i class="fas fa-video fa-3x text-primary mb-3"></i>
+                            <h4 class="fw-bold">Video Consultations</h4>
+                            <p>Connect with doctors from the comfort of your home. Secure and convenient.</p>
+                            <a href="#" class="btn btn-outline-primary btn-sm rounded-pill">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="option-card p-4 rounded shadow-sm">
+                            <i class="fas fa-map-marker-alt fa-3x text-primary mb-3"></i>
+                            <h4 class="fw-bold">In-Person Visits</h4>
+                            <p>Find and book appointments for physical visits at clinics and hospitals near you.</p>
+                            <a href="#" class="btn btn-outline-primary btn-sm rounded-pill">Find Clinics</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="option-card p-4 rounded shadow-sm">
+                            <i class="fas fa-pills fa-3x text-primary mb-3"></i>
+                            <h4 class="fw-bold">E-Prescriptions</h4>
+                            <p>Get prescriptions digitally and have them sent directly to your pharmacy.</p>
+                            <a href="#" class="btn btn-outline-primary btn-sm rounded-pill">My Prescriptions</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-5" id="doctors">
+            <div class="container">
+                <h2 class="text-center text-primary mb-5 fw-bold">Our Top Doctors</h2>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card h-100 shadow-sm text-center">
+                            <img src="../images/doctor1.png" class="card-img-top mx-auto mt-3 rounded-circle"
+                                alt="Dr. Alice Wonderland" style="width: 150px; height: 150px; object-fit: cover;">
+                            <div class="card-body">
+                                <h5 class="card-title text-primary">Dr. Alice Wonderland</h5>
+                                <p class="card-text text-muted">Cardiologist</p>
+                                <p class="card-text"><i class="fas fa-star text-warning"></i> 4.9 (250+ Reviews)</p>
+                                <p class="card-text small text-secondary">
+                                    <i class="fas fa-user-graduate"></i> **Experience**: 15 years<br>
+                                    <i class="fas fa-hospital"></i> **Affiliation**: Central City Hospital<br>
+                                    <i class="fas fa-tags"></i> **Specializes in**: Arrhythmia, Heart Failure<br>
+                                    <i class="fas fa-calendar-check"></i> **Next Availability**: Tomorrow, 10:00 AM
+                                </p>
+                                <a href="doctor-profile.html"
+                                    class="btn btn-outline-primary btn-sm rounded-pill mt-2">View Profile</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 shadow-sm text-center">
+                            <img src="../images/doctor2.jpeg" class="card-img-top mx-auto mt-3 rounded-circle"
+                                alt="Dr. Bob Johnson" style="width: 150px; height: 150px; object-fit: cover;">
+                            <div class="card-body">
+                                <h5 class="card-title text-primary">Dr. Bob Johnson</h5>
+                                <p class="card-text text-muted">Pediatrician</p>
+                                <p class="card-text"><i class="fas fa-star text-warning"></i> 4.8 (180+ Reviews)</p>
+                                <p class="card-text small text-secondary">
+                                    <i class="fas fa-user-graduate"></i> **Experience**: 10 years<br>
+                                    <i class="fas fa-hospital"></i> **Affiliation**: City Children's Clinic<br>
+                                    <i class="fas fa-tags"></i> **Specializes in**: Child Development, Vaccinations<br>
+                                    <i class="fas fa-calendar-check"></i> **Next Availability**: August 12, 02:00 PM
+                                </p>
+                                <a href="doctor-profile.html"
+                                    class="btn btn-outline-primary btn-sm rounded-pill mt-2">View Profile</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 shadow-sm text-center">
+                            <img src="../images/doctor.png" class="card-img-top mx-auto mt-3 rounded-circle"
+                                alt="Dr. Carol White" style="width: 150px; height: 150px; object-fit: cover;">
+                            <div class="card-body">
+                                <h5 class="card-title text-primary">Dr. Carol White</h5>
+                                <p class="card-text text-muted">Dermatologist</p>
+                                <p class="card-text"><i class="fas fa-star text-warning"></i> 4.7 (120+ Reviews)</p>
+                                <p class="card-text small text-secondary">
+                                    <i class="fas fa-user-graduate"></i> **Experience**: 8 years<br>
+                                    <i class="fas fa-hospital"></i> **Affiliation**: Dermacare Institute<br>
+                                    <i class="fas fa-tags"></i> **Specializes in**: Acne Treatment, Skin Cancer
+                                    Screening<br>
+                                    <i class="fas fa-calendar-check"></i> **Next Availability**: Today, 04:30 PM
+                                </p>
+                                <a href="doctor-profile.html"
+                                    class="btn btn-outline-primary btn-sm rounded-pill mt-2">View Profile</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-5 bg-light" id="image-gallery">
+            <div class="container">
+                <h2 class="text-center text-primary mb-5 fw-bold">Our Clinic & Facilities</h2>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="image-card">
+                            <img src="../images/Medical Reception.jpg" alt="Reception Area"
+                                class="img-fluid rounded shadow-sm">
+                            <div class="image-overlay">
+                                <h5 class="image-title">Modern Reception</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="image-card">
+                            <img src="../images/consultation.jpg" alt="Consultation Room"
+                                class="img-fluid rounded shadow-sm">
+                            <div class="image-overlay">
+                                <h5 class="image-title">Comfortable Consultation</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="image-card">
+                            <img src="../images/Medicaltechnology.jpg" alt="Medical Equipment"
+                                class="img-fluid rounded shadow-sm">
+                            <div class="image-overlay">
+                                <h5 class="image-title">Advanced Technology</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="image-card">
+                            <img src="../images/waitingarea.jpeg" alt="Waiting Area"
+                                class="img-fluid rounded shadow-sm">
+                            <div class="image-overlay">
+                                <h5 class="image-title">Spacious Waiting Area</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="image-card">
+                            <img src="../images/lab.jpeg" alt="Lab Room" class="img-fluid rounded shadow-sm">
+                            <div class="image-overlay">
+                                <h5 class="image-title">On-site Lab</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="image-card">
+                            <img src="../images/staff.jpeg" alt="Friendly Staff" class="img-fluid rounded shadow-sm">
+                            <div class="image-overlay">
+                                <h5 class="image-title">Our Friendly Staff</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="appointment-section" id="MakeAppointment">
+            <div class="container py-5">
+                <div class="row g-4">
+               
+                    <div class="col-lg-6 d-flex align-items-center justify-content-center">
+                        <img src="../images/appointment.png" class="img-fluid rounded shadow"
+                            alt="A person using a smart device to book a medical appointment">
+                    </div>
+
+                 
+                    <div class="col-lg-6">
+                        <div class="card shadow-sm p-4">
+                            <h2 class="card-title text-center mb-4">Book Your Appointment</h2>
+                            <p class="card-text text-center text-muted mb-4">
+                                Fill out the form below to schedule a visit with one of our healthcare professionals.
+                            </p>
+
+                          
+                            <div id="appointmentMessage" class="alert d-none" role="alert"></div>
+
+                            <form id="appointmentForm" method="post">
+                                <div class="mb-3">
+                                    <label for="patientName" class="form-label">Patient Name</label>
+                                    <input type="text" class="form-control" id="patientName" name="patientName"
+                                        placeholder="e.g., John Doe" required>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="doctorSelect" class="form-label">Select a Doctor</label>
+                                    <select class="form-select" id="doctorSelect" name="doctorSelect" required>
+                                        <option selected disabled value="">Choose a doctor...</option>
+                                        <option value="dr-smith">Dr. Alan Smith (Cardiology)</option>
+                                        <option value="dr-jones">Dr. Emily Jones (Dermatology)</option>
+                                        <option value="dr-williams">Dr. Sarah Williams (General Practice)</option>
+                                    </select>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="appointmentDate" class="form-label">Select a Date</label>
+                                    <input type="date" class="form-control" id="appointmentDate" name="appointmentDate"
+                                        required>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="appointmentTime" class="form-label">Select a Time Slot</label>
+                                    <select class="form-select" id="appointmentTime" name="appointmentTime" required>
+                                        <option selected disabled value="">Choose a time...</option>
+                                        <option value="09:00">09:00 AM</option>
+                                        <option value="10:00">10:00 AM</option>
+                                        <option value="11:00">11:00 AM</option>
+                                        <option value="13:00">01:00 PM</option>
+                                        <option value="14:00">02:00 PM</option>
+                                        <option value="15:00">03:00 PM</option>
+                                        <option value="16:00">04:00 PM</option>
+                                    </select>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="reasonForVisit" class="form-label">Reason for Visit</label>
+                                    <textarea class="form-control" id="reasonForVisit" name="reasonForVisit" rows="3"
+                                        placeholder="e.g., General check-up, follow-up, new symptoms..."></textarea>
+                                </div>
+
+                                <div class="d-grid gap-2 mt-4">
+                                    <button type="submit" class="btn btn-primary btn-lg">Confirm Appointment</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section class="py-5 bg-light" id="featuredDoctors">
+            <div class="container">
+                <h2 class="text-center text-primary mb-5 fw-bold">Our Specialists</h2>
+                <div class="row g-4 justify-content-center">
+                    <div class="col-md-6 col-lg-3">
+                        <div class="smart-card">
+                            <img src="../images/Specialist1.jpeg" alt="Dr. Sarah Chen"
+                                class="img-fluid rounded-circle mb-3"
+                                style="width: 150px; height: 150px; object-fit: cover;">
+                            <h4 class="fw-bold">Dr. Sarah Chen</h4>
+                            <p class="text-muted">General Physician</p>
+                            <a href="#" class="btn btn-outline-primary btn-sm rounded-pill">View Profile</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="smart-card">
+                            <img src="../images/Specialist2.jpeg" alt="Dr. Michael Lee"
+                                class="img-fluid rounded-circle mb-3"
+                                style="width: 150px; height: 150px; object-fit: cover;">
+                            <h4 class="fw-bold">Dr. Michael Lee</h4>
+                            <p class="text-muted">Pediatrician</p>
+                            <a href="#" class="btn btn-outline-primary btn-sm rounded-pill">View Profile</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="smart-card">
+                            <img src="../images/Specialist3.jpeg" alt="Dr. Emily White"
+                                class="img-fluid rounded-circle mb-3"
+                                style="width: 150px; height: 150px; object-fit: cover;">
+                            <h4 class="fw-bold">Dr. Emily White</h4>
+                            <p class="text-muted">Dermatologist</p>
+                            <a href="#" class="btn btn-outline-primary btn-sm rounded-pill">View Profile</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-5" id="contact">
+            <div class="container">
+                <h2 class="text-center text-primary mb-5 fw-bold">Contact Us</h2>
+                <div class="row g-4">
+                    <div class="col-lg-6">
+                        <p class="lead">We'd love to hear from you. Whether you have a question about our services, need
+                            technical support, or want to provide feedback, our team is ready to help.</p>
+                        <ul class="list-unstyled contact-info">
+                            <li><i class="fas fa-map-marker-alt text-primary"></i> 123 Health Ave, Wellness City, 54321
+                            </li>
+                            <li><i class="fas fa-envelope text-primary"></i> support@smarthealth.com</li>
+                            <li><i class="fas fa-phone-alt text-primary"></i> +1 (555) 123-4567</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="card shadow-sm p-4">
+                            <h4 class="card-title text-center mb-4">Send Us a Message</h4>
+                            <form>
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" placeholder="Your Name" required>
+                                </div>
+                                <div class="mb-3">
+                                    <input type="email" class="form-control" placeholder="Your Email" required>
+                                </div>
+                                <div class="mb-3">
+                                    <textarea class="form-control" rows="4" placeholder="Your Message"
+                                        required></textarea>
+                                </div>
+                                <div class="d-grid">
+                                    <button type="submit" class="btn btn-primary">Send Message</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+
+
+
+
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content rounded shadow-sm">
+                <div class="modal-header">
+                    <h5 class="modal-title fw-bold" id="loginModalLabel">Login</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form id="loginForm">
+                    <div class="modal-body">
+                    
+
+                        <input type="text" name="full_name" id="loginName" class="form-control mb-2"
+                            placeholder="Full Name" required />
+
+                        <select name="role" id="loginRole" class="form-select" required>
+                            <option value="">Select Role</option>
+                            <option value="patient">Patient</option>
+                            <option value="doctor">Doctor</option>
+                        </select>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary w-100">Login</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- Register Modal -->
+    <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content rounded shadow-sm">
+                <div class="modal-header">
+                    <h5 class="modal-title fw-bold" id="registerModalLabel">Register</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form id="registerForm">
+                    <div class="modal-body">
+                        <input type="text" name="full_name" id="registerName" class="form-control mb-2"
+                            placeholder="Full Name" required />
+                        <input type="email" name="email" id="registerEmail" class="form-control mb-2"
+                            placeholder="Email" required />
+                        <input type="password" name="password" id="registerPassword" class="form-control mb-2"
+                            placeholder="Password" required />
+                        <input type="password" name="confirm_password" id="registerConfirmPassword"
+                            class="form-control mb-2" placeholder="Confirm Password" required />
+                        <select name="role" id="registerRole" class="form-select" required>
+                            <option value="">Select Role</option>
+                            <option value="patient">Patient</option>
+                            <option value="doctor">Doctor</option>
+                        </select>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-success w-100">Register</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="messageModal" tabindex="-1" aria-labelledby="messageModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content rounded shadow-sm">
+                <div class="modal-header">
+                    <h5 class="modal-title fw-bold" id="messageModalLabel">Notification</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p id="messageText"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+   
+    <footer>
+        <div class="container text-center">
+            <p class="mb-1">&copy; 2025 Smart Health. All rights reserved.</p>
+            <p class="mb-0">
+                <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+            </p>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
